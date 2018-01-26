@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios'
+import apiData from './config.json'
 
 class MovieContainer extends Component {
   constructor(props){
@@ -7,6 +9,8 @@ class MovieContainer extends Component {
       movies: []
     }
   }
+
+
   render() {
     return (
       <div className="App">
