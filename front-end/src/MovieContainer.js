@@ -10,6 +10,15 @@ class MovieContainer extends Component {
     }
   }
 
+  componentWillMount(request = axios){
+    let self = this
+    request.get(`${apiData.baseUrl}discover/movie?api_key=${apiData.apiKey}`)
+    .then( function(response) {
+      let newState = self.state
+      newState.movies = response.data.results
+      self.setState(newState)
+    })
+  }
 
   render() {
     return (
