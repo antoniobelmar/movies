@@ -22,8 +22,14 @@ class MovieContainer extends Component {
 
   render() {
     return (
-      <div className="App">
-        Hello
+      <div className="MovieList">
+        {this.state.movies.length > 0 &&
+          this.state.movies.map(function(movie, index) {
+            return(
+              <div key={index} className={'movie'+index}> {movie.title} </div>
+            )
+          })
+        }
       </div>
     );
   }
