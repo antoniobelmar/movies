@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import apiData from './config.json'
+import Movie from './Movie'
 
 class MovieContainer extends Component {
   constructor(props){
@@ -26,7 +27,12 @@ class MovieContainer extends Component {
         {this.state.movies.length > 0 &&
           this.state.movies.map(function(movie, index) {
             return(
-              <div key={index} className={'movie'+index}> {movie.title} </div>
+              <div key={index}>
+                <Movie
+                  movie = {movie}
+                  index = {index}
+                />
+              </div>
             )
           })
         }
