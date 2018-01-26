@@ -1,9 +1,14 @@
-import { sayHello } from '../src/services/stateFunctions';
+import React from 'react'
+import App from '../src/App'
+import { configure, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-test('greets the makers', () => {
-  const greeting = sayHello();
+configure({ adapter: new Adapter() });
 
-  expect(greeting).toEqual(
-    '🔫 💣 🔎 🎈 🎁 🔥'
-  );
+describe('App', () => {
+  const wrapper = shallow(<App />)
+
+  it('contains a <div>', () => {
+    expect(wrapper.type()).toEqual('div')
+  });
 });
