@@ -13,4 +13,12 @@ describe('Movie', () => {
     expect(wrapper.type()).toEqual('div')
   });
 
+  it('has a div that renders the movie title', () => {
+    expect(wrapper.find('.movie-title-1').text()).toEqual('test title')
+  });
+
+  it('has a div that renders the movie overview', () => {
+    expect(wrapper.find('.movie-overview-1').text()).toEqual('test overview')
+  });
+
 });
