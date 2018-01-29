@@ -21,7 +21,7 @@ class MovieContainer extends Component {
 
   render() {
     return (
-      <div className="MovieList">
+      <div className="movie-list">
         {this.state.movies &&
           this.state.movies.map(function(movie, index) {
             return(
