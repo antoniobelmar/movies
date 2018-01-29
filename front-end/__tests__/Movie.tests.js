@@ -21,4 +21,9 @@ describe('Movie', () => {
     expect(wrapper.find('.movie-overview-1').text()).toEqual('test overview')
   });
 
+  it('has an image tag with the source including the relevant poster path', () => {
+    // console.log(wrapper.find('.movie-image-1').attribute)
+    expect(wrapper.find('.movie-image-1').prop('src')).toEqual("http://image.tmdb.org/t/p/w185/test_poster_path")
+  });
+
 });
