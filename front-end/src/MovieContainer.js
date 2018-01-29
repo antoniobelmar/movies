@@ -6,9 +6,7 @@ import Movie from './Movie'
 class MovieContainer extends Component {
   constructor(props){
     super(props)
-    this.state = {
-      movies: []
-    }
+    this.state = {}
   }
 
   componentWillMount(request = axios){
@@ -24,7 +22,7 @@ class MovieContainer extends Component {
   render() {
     return (
       <div className="MovieList">
-        {this.state.movies.length > 0 &&
+        {this.state.movies &&
           this.state.movies.map(function(movie, index) {
             return(
               <div key={index}>

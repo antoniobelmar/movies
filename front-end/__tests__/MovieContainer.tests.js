@@ -11,7 +11,5 @@ describe('MovieContainer', () => {
   it('outer element is a <div>', () => {
     expect(wrapper.type()).toEqual('div')
   });
-  it('this.state.movies is an array', () => {
-    expect(wrapper.state().movies).toBeDefined();
-  });
+
 });
