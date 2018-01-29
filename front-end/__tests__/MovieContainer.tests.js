@@ -12,4 +12,9 @@ describe('MovieContainer', () => {
     expect(wrapper.type()).toEqual('div')
   });
 
+  it('renders the Movie component when movies are in state', () => {
+    wrapper.setState({movies: ['movie']})
+    expect(wrapper.find('Movie').length).toEqual(1)
+  })
+
 });
