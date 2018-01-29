@@ -1,9 +1,7 @@
 import React from 'react'
+import '../src/testHelpers.js'
 import MovieContainer from '../src/MovieContainer'
-import { configure, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-
-configure({ adapter: new Adapter() });
+import { shallow, mouunt } from 'enzyme';
 
 describe('MovieContainer', () => {
   const wrapper = shallow(<MovieContainer />)

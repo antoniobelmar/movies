@@ -1,9 +1,7 @@
 import React from 'react'
+import '../src/testHelpers.js'
 import Movie from '../src/Movie'
-import { configure, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-
-configure({ adapter: new Adapter() });
+import { shallow } from 'enzyme';
 
 describe('Movie', () => {
   const movieObject = {title: 'test title', overview: 'test overview', poster_path: 'test_poster_path'}
